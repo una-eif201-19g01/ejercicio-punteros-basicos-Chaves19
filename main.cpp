@@ -31,15 +31,15 @@ void menu() {
     char hold;
 
     do {
-        std::cout << "  Menú Calculos con Punteros\n";
+        std::cout << "  Menu Calculos con Punteros\n";
         std::cout << "  ====================================\n";
         std::cout << "  1.  Imprimir datos del puntero en un valor de entrada\n";
-        std::cout << "  2.  Imprime el número 5 al cubo con función por VALOR\n";
-        std::cout << "  3.  Imprime el número 5 al cubo con función por PUNTERO3\n";
-        std::cout << "  4.  Imprime el número 5 al cubo con función por REFERENCIA\n";
-        std::cout << "  5.  Imprime el número 5 al cubo con función por VALOR\n";
-        std::cout << "  6.  Imprime el número 5 al cubo con función por PUNTERO3\n";
-        std::cout << "  7.  Imprime el número 5 al cubo con función por REFERENCIA\n";
+        std::cout << "  2.  Imprime el numero 5 al cubo con funcion por VALOR\n";
+        std::cout << "  3.  Imprime el numero 5 al cubo con funcion por PUNTERO3\n";
+        std::cout << "  4.  Imprime el numero 5 al cubo con funcion por REFERENCIA\n";
+        std::cout << "  5.  Imprime el numero 5 al cubo con funcion por VALOR\n";
+        std::cout << "  6.  Imprime el numero 5 al cubo con funcion por PUNTERO3\n";
+        std::cout << "  7.  Imprime el numero 5 al cubo con funcion por REFERENCIA\n";
         std::cout << "\n";
         std::cout << "  8.  Exit\n";
         std::cout << "  ====================================\n";
@@ -96,7 +96,7 @@ void menu() {
                 break;
 
             default:
-                std::cout << respuesta << " es un número inválido\n";
+                std::cout << respuesta << " es un número invalido\n";
 
                 std::cout << std::endl;
         }
