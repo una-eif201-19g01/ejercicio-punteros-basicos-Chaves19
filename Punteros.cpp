@@ -34,6 +34,21 @@ int Punteros::numeroAlCuboReferencia(int& numeroPtr) {
     return numeroPtr;
 }
 
+int Punteros::raizDeUnNumeroValor(int numero) {
+    numero = numero / (1/2);
+    return numero;
+}
+
+int Punteros::raizDeUnNumeroPuntero(int *numeroPtr) {
+    *numeroPtr = *numeroPtr / (1/2);
+    return *numeroPtr;
+}
+
+int Punteros::raizDeUnNumeroReferencia(int& numeroPtr) {
+    numeroPtr = numeroPtr / (1/2);
+    return numeroPtr;
+}
+
 void Punteros::imprimirDatosPuntero() {
     int numero = 0;
     int *numeroPtr = nullptr;
@@ -55,7 +70,7 @@ void Punteros::imprimirDatosPuntero() {
               << std::endl;
 }
 
-void Punteros::imprimirCalculoAlCuboReferenciaValor() {
+void Punteros::imprimirCalculoAlCuboValor() {
     int numero = 0;
 
     numero = 5;
@@ -69,7 +84,7 @@ void Punteros::imprimirCalculoAlCuboReferenciaValor() {
     std::cout << "\n\tEl resulado al cubo de la variable [ numero ] es: " << numero << std::endl;
 }
 
-void Punteros::imprimirCalculoAlCuboReferenciaPuntero() {
+void Punteros::imprimirCalculoAlCuboPuntero() {
     int numero = 0;
 
     numero = 5;
@@ -83,7 +98,7 @@ void Punteros::imprimirCalculoAlCuboReferenciaPuntero() {
     std::cout << "\n\tEl resulado al cubo de la variable [ numero ] es: " << numero << std::endl;
 }
 
-void Punteros::imprimirCalculoAlCuboReferenciaReferencia() {
+void Punteros::imprimirCalculoAlCuboReferencia() {
     int numero = 0;
 
     numero = 5;
@@ -93,6 +108,48 @@ void Punteros::imprimirCalculoAlCuboReferenciaReferencia() {
     std::cout << "\tEl valor original de la variable [ numero ] es " << numero;
 
     numero = numeroAlCuboReferencia(numero);
+
+    std::cout << "\n\tEl resulado al cubo de la variable [ numero ] es: " << numero << std::endl;
+}
+
+void Punteros::imprimirCalculoRaizDeUnNumeroValor() {
+    int numero = 0;
+
+    numero = 5;
+
+    std::cout << "\nImprime datos de los punteros que se pasan por Valor ____________________"
+              << std::endl;
+    std::cout << "\tEl valor original de la variable [ numero ] es " << numero;
+
+    numero = raizDeUnNumeroValor(numero);
+
+    std::cout << "\n\tEl resulado al cubo de la variable [ numero ] es: " << numero << std::endl;
+}
+
+void Punteros::imprimirCalculoRaizDeUnNumeroPuntero() {
+    int numero = 0;
+
+    numero = 5;
+
+    std::cout << "\nImprime datos de los punteros que se pasan por Puntero ____________________"
+              << std::endl;
+    std::cout << "\tEl valor original de la variable [ numero ] es " << numero;
+
+    numero = raizDeUnNumeroPuntero(&numero);
+
+    std::cout << "\n\tEl resulado al cubo de la variable [ numero ] es: " << numero << std::endl;
+}
+
+void Punteros::imprimirCalculoRaizDeUnNumeroReferencia() {
+    int numero = 0;
+
+    numero = 5;
+
+    std::cout << "\nImprime datos de los punteros que se pasan por Referencia ____________________"
+              << std::endl;
+    std::cout << "\tEl valor original de la variable [ numero ] es " << numero;
+
+    numero = raizDeUnNumeroReferencia(numero);
 
     std::cout << "\n\tEl resulado al cubo de la variable [ numero ] es: " << numero << std::endl;
 }
